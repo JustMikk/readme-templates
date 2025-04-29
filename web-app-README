@@ -1,0 +1,193 @@
+
+# 🏡 WindBnB
+
+**WindBnB** is a modern property rental platform built with Next.js, similar to Airbnb. This application allows users to list properties, make reservations, and manage their trips and listings.
+
+## 🖼️ Screenshots
+![windbnb](</public/images/demo.png>)
+
+---
+
+## 📚 Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [Notes](#notes)
+
+---
+
+<a name="features"></a>
+## ✨ Features
+
+- **User Authentication** – Sign up, log in with email/password or social providers (Google, GitHub)
+- **Property Listings** – Create, view, and manage property listings with detailed information
+- **Reservations** – Book properties for specific dates, manage your trips
+- **Property Management** – Manage your properties and view reservations made by guests
+- **Search & Filtering** – Find properties by location, dates, guests, and property features
+- **Categories** – Browse properties by categories like Beach, Modern, Countryside, etc.
+- **Favorites** – Save properties to your favorites list
+- **Responsive Design** – Fully responsive UI that works on all devices
+
+---
+
+<a name="tech-stack"></a>
+## 🛠️ Tech Stack
+
+### Frontend
+
+- **Next.js**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+
+### Backend
+
+- **Next.js API Routes**
+
+### Database
+
+- **Prisma ORM** with a database (likely PostgreSQL)
+
+### Authentication
+
+- **NextAuth.js**
+
+### Additional
+
+- **State Management** – React Hooks
+- **Form Handling** – React Hook Form
+- **Date Handling** – date-fns, react-date-range
+- **Maps** – Dynamic map component
+- **Notifications** – react-hot-toast
+
+---
+
+<a name="getting-started"></a>
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm or yarn
+- MongoDB or PostgreSQL instance
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/JustMikk/WindBnB.git
+cd WindBnB
+
+# Install dependencies
+npm install
+# or
+yarn install
+```
+
+### Environment Variables
+
+Create a `.env` file in the root directory and add:
+
+```env
+DATABASE_URL="your-database-connection-string"
+NEXTAUTH_SECRET="your-nextauth-secret"
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="your-cloudinary-cloud-name"
+```
+
+### Run Database Migrations
+
+```bash
+npx prisma generate
+npx prisma db push
+```
+
+### Start the Development Server
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+> The app will be available at **http://localhost:3000**
+
+---
+
+<a name="usage"></a>
+## 🧑‍💻 Usage
+
+### Creating a Listing
+
+As a host, you can create new property listings including:
+
+- Title and description
+- Price per night
+- Location
+- Room, bathroom, and guest count
+- Category and image uploads
+
+### Making a Reservation
+
+To book a property:
+
+1. Browse available listings
+2. Select a listing to view details
+3. Choose dates via the date picker
+4. Click **"Reserve"** to complete the booking
+
+### Managing Reservations
+
+Hosts can:
+
+- View reservations made on their properties
+- Accept or decline booking requests
+
+---
+
+<a name="project-structure"></a>
+## 🗂 Project Structure
+
+The project follows a standard Next.js application structure with the following key directories:
+
+```
+app/  
+├── actions/           # Server actions for data fetching  
+├── api/               # API routes for CRUD operations  
+├── components/        # Reusable UI components  
+│   ├── listings/      # Listing-related components  
+│   ├── modals/        # Modal components for forms  
+│   └── navbar/        # Navigation components  
+├── hooks/             # Custom React hooks  
+├── libs/              # Utility libraries  
+├── providers/         # Context providers  
+├── types/             # TypeScript type definitions  
+└── [feature]/         # Feature-specific pages and components  
+    └── page.tsx       # Page components  
+```
+
+---
+
+<a name="contributing"></a>
+## 🤝 Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request to contribute to WindBnB.
+
+---
+
+<a name="notes"></a>
+## 📝 Notes
+
+This README provides a full overview of the **WindBnB** project, a complete clone of Airbnb built with a modern web stack:
+
+- Full CRUD operations
+- Real-time updates for trips and bookings
+- Authentication, image uploads, maps, and location data
+- Clean folder structure and separation of concerns
+
+---
+
+© 2025 WindBnB Project. All rights reserved.
